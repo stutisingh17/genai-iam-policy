@@ -1,0 +1,21 @@
+[
+  {"text": "Finance staff can view invoices, but only a finance manager can approve them, and the same person must not create and approve an invoice.",
+   "expected": [["role:finance_employee", "view", "invoice", "permit"], ["role:finance_manager", "approve", "invoice", "permit"]],
+   "guarded": ["approve", "invoice", "creator != approver"]},
+  {"text": "Finance staff can view invoices.",
+   "expected": [["role:finance_employee", "view", "invoice", "permit"]]},
+  {"text": "Auditors can view audit logs.",
+   "expected": [["role:auditor", "view", "audit_log", "permit"]]},
+  {"text": "HR officers can view and edit payroll records.",
+   "expected": [["role:hr_officer", "view", "payroll_record", "permit"], ["role:hr_officer", "edit", "payroll_record", "permit"]]},
+  {"text": "Developers can read source code. Developers can edit source code.",
+   "expected": [["role:developer", "view", "source_code", "permit"], ["role:developer", "edit", "source_code", "permit"]]},
+  {"text": "Finance managers can approve invoices, and the same person must not edit and approve an invoice.",
+   "expected": [["role:finance_manager", "approve", "invoice", "permit"]],
+   "guarded": ["approve", "invoice", "editor != approver"]},
+  {"text": "Auditors can view invoices and view audit logs.",
+   "expected": [["role:auditor", "view", "invoice", "permit"], ["role:auditor", "view", "audit_log", "permit"]]},
+  {"text": "Finance staff get full access to everything.", "expect_clarify": true},
+  {"text": "Developers can manage whatever they need.", "expect_clarify": true},
+  {"text": "Auditors can shred audit logs.", "expect_clarify": true}
+]

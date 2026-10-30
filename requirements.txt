@@ -1,0 +1,5 @@
+# Core prototype needs only the Python standard library (3.9+).
+# Optional: real LLM backend (--llm anthropic)
+anthropic
+# Optional: regenerate figures (results/figs.py)
+matplotlib

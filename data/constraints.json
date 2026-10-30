@@ -1,0 +1,7 @@
+{
+  "sod": [
+    {"id": "SOD-1", "actions": ["create", "approve"], "guard": "approve", "condition": "creator != approver"},
+    {"id": "SOD-2", "actions": ["edit", "approve"], "guard": "approve", "condition": "editor != approver"},
+    {"id": "SOD-3", "actions": ["create", "delete"], "guard": "delete", "condition": "creator != deleter"}
+  ]
+}

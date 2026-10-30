@@ -1,0 +1,41 @@
+{
+  "subjects": {
+    "finance_employee": ["finance employee", "finance employees", "finance staff", "accounts clerk", "accounts clerks"],
+    "finance_manager": ["finance manager", "finance managers"],
+    "hr_officer": ["hr officer", "hr officers", "hr staff"],
+    "auditor": ["auditor", "auditors"],
+    "developer": ["developer", "developers"]
+  },
+  "actions": {
+    "view": ["view", "read", "see", "look at"],
+    "create": ["create", "raise", "submit"],
+    "edit": ["edit", "modify", "update"],
+    "approve": ["approve"],
+    "delete": ["delete", "remove"],
+    "export": ["export", "download"]
+  },
+  "resources": {
+    "invoice": ["invoice", "invoices"],
+    "payroll_record": ["payroll record", "payroll records", "payroll"],
+    "employee_record": ["employee record", "employee records"],
+    "source_code": ["source code", "repository", "repositories"],
+    "audit_log": ["audit log", "audit logs"]
+  },
+  "attributes": {
+    "create": "creator",
+    "approve": "approver",
+    "edit": "editor",
+    "view": "viewer",
+    "delete": "deleter",
+    "export": "exporter"
+  },
+  "ambiguous_terms": [
+    "full access", "everything", "all access", "all permissions", "any resource",
+    "unrestricted", "admin rights", "admin access", "superuser", "whatever",
+    "all data", "all records", "anything", "manage"
+  ],
+  "injection_patterns": [
+    "ignore (all|any|the|previous|prior)", "disregard", "system prompt", "you are now",
+    "grant (everyone|all|admin)", "override", "as an ai", "new instructions", "<\\|"
+  ]
+}

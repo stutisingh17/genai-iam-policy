@@ -1,0 +1,16 @@
+{
+  "role_hierarchy": {
+    "finance_manager": ["finance_employee"]
+  },
+  "users": {
+    "alice": ["finance_employee"],
+    "bob": ["finance_manager"],
+    "carol": ["finance_employee", "auditor"]
+  },
+  "rules": [
+    {"id": "P1", "subject": "role:finance_employee", "action": "create", "resource": "invoice", "effect": "permit", "source": "existing"},
+    {"id": "P2", "subject": "role:finance_employee", "action": "delete", "resource": "invoice", "effect": "deny", "source": "existing"},
+    {"id": "P3", "subject": "role:auditor", "action": "view", "resource": "audit_log", "effect": "permit", "source": "existing"},
+    {"id": "P4", "subject": "role:hr_officer", "action": "view", "resource": "payroll_record", "effect": "permit", "source": "existing"}
+  ]
+}

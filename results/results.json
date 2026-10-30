@@ -1,0 +1,267 @@
+{
+ "exp1": [
+  {
+   "name": "S1 Faithful draft",
+   "status": "APPROVED",
+   "attempts": 1,
+   "first_gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS"
+   },
+   "flags": 0,
+   "reviewed": true
+  },
+  {
+   "name": "S2 Over-broad (retry fixes)",
+   "status": "APPROVED",
+   "attempts": 2,
+   "first_gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "FAIL",
+    "G4": "FAIL",
+    "G5": "PASS",
+    "G6": "FAIL"
+   },
+   "flags": 0,
+   "reviewed": true
+  },
+  {
+   "name": "S3 Missing SoD (persistent)",
+   "status": "REJECT",
+   "attempts": 3,
+   "first_gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "FAIL",
+    "G5": "PASS",
+    "G6": "PASS"
+   },
+   "flags": 0,
+   "reviewed": false
+  },
+  {
+   "name": "S4 Hallucinated (persistent)",
+   "status": "REJECT",
+   "attempts": 3,
+   "first_gates": {
+    "G1": "FAIL",
+    "G2": "PASS",
+    "G3": "FAIL",
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "FAIL"
+   },
+   "flags": 0,
+   "reviewed": false
+  },
+  {
+   "name": "S5 Vague requirement",
+   "status": "CLARIFY",
+   "attempts": 0,
+   "first_gates": null,
+   "flags": 0,
+   "reviewed": false
+  },
+  {
+   "name": "S6 Embedded instruction",
+   "status": "APPROVED",
+   "attempts": 1,
+   "first_gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS"
+   },
+   "flags": 1,
+   "reviewed": true
+  }
+ ],
+ "exp2": {
+  "none": {
+   "N": 7,
+   "correct": 7,
+   "unsafe": 0,
+   "A_accept_unsafe": 0,
+   "B_accept_unsafe": 0,
+   "B_rejected": 1,
+   "B_false_reject": 1,
+   "findings": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 2,
+    "G5": 0,
+    "G6": 0
+   },
+   "gates_hit": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 1,
+    "G5": 0,
+    "G6": 0
+   }
+  },
+  "overbroad": {
+   "N": 7,
+   "correct": 0,
+   "unsafe": 7,
+   "A_accept_unsafe": 7,
+   "B_accept_unsafe": 0,
+   "B_rejected": 7,
+   "B_false_reject": 0,
+   "findings": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 7,
+    "G4": 16,
+    "G5": 1,
+    "G6": 7
+   },
+   "gates_hit": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 7,
+    "G4": 6,
+    "G5": 1,
+    "G6": 7
+   }
+  },
+  "wildcard": {
+   "N": 7,
+   "correct": 0,
+   "unsafe": 7,
+   "A_accept_unsafe": 7,
+   "B_accept_unsafe": 0,
+   "B_rejected": 7,
+   "B_false_reject": 0,
+   "findings": {
+    "G1": 0,
+    "G2": 7,
+    "G3": 7,
+    "G4": 0,
+    "G5": 0,
+    "G6": 7
+   },
+   "gates_hit": {
+    "G1": 0,
+    "G2": 7,
+    "G3": 7,
+    "G4": 0,
+    "G5": 0,
+    "G6": 7
+   }
+  },
+  "missing_sod": {
+   "N": 7,
+   "correct": 5,
+   "unsafe": 2,
+   "A_accept_unsafe": 2,
+   "B_accept_unsafe": 0,
+   "B_rejected": 2,
+   "B_false_reject": 0,
+   "findings": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 4,
+    "G5": 0,
+    "G6": 0
+   },
+   "gates_hit": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 2,
+    "G5": 0,
+    "G6": 0
+   }
+  },
+  "hallucinated": {
+   "N": 7,
+   "correct": 0,
+   "unsafe": 7,
+   "A_accept_unsafe": 7,
+   "B_accept_unsafe": 0,
+   "B_rejected": 7,
+   "B_false_reject": 0,
+   "findings": {
+    "G1": 7,
+    "G2": 0,
+    "G3": 7,
+    "G4": 2,
+    "G5": 0,
+    "G6": 7
+   },
+   "gates_hit": {
+    "G1": 7,
+    "G2": 0,
+    "G3": 7,
+    "G4": 1,
+    "G5": 0,
+    "G6": 7
+   }
+  },
+  "conflict": {
+   "N": 7,
+   "correct": 0,
+   "unsafe": 7,
+   "A_accept_unsafe": 7,
+   "B_accept_unsafe": 0,
+   "B_rejected": 7,
+   "B_false_reject": 0,
+   "findings": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 7,
+    "G4": 32,
+    "G5": 7,
+    "G6": 7
+   },
+   "gates_hit": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 7,
+    "G4": 7,
+    "G5": 7,
+    "G6": 7
+   }
+  },
+  "omit_rule": {
+   "N": 7,
+   "correct": 0,
+   "unsafe": 7,
+   "A_accept_unsafe": 7,
+   "B_accept_unsafe": 4,
+   "B_rejected": 3,
+   "B_false_reject": 0,
+   "findings": {
+    "G1": 3,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0,
+    "G6": 0
+   },
+   "gates_hit": {
+    "G1": 3,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0,
+    "G6": 0
+   }
+  }
+ },
+ "validate_ms_median": 0.3633010000001491,
+ "validate_ms_max": 0.6085280000007742,
+ "validate_calls": 49
+}
